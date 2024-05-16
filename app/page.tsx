@@ -1,11 +1,11 @@
-import { Hero, SearchBar, CustomFilter, CarCard, ShowMore } from "@/components";
-import { fetchCars } from "@/utils";
+import { CarCard, CustomFilter, Hero, SearchBar, ShowMore } from "@/components";
 import { fuels, yearsOfProduction } from "@/constant";
+import { fetchCars } from "@/utils";
 
 // @ts-ignore
 export default async function Home({ searchParams }) {
   const allCars = await fetchCars({
-    manufacturer: searchParams.manufacturer || "",
+    manufacturer: searchParams.manufacturer || "toyota",
     year: searchParams.year || "2022",
     fuel: searchParams.fuel || "",
     limit: searchParams.limit || "10",

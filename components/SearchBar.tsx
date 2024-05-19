@@ -71,7 +71,7 @@ const SearchBar = () => {
       </div>
       <div className="searchbar__item">
         <Image
-          src="/model-icon.png"
+          src="/car_showcase/model-icon.png"
           width={25}
           height={25}
           className="absolute w-[20px] h-[20px] ml-4"

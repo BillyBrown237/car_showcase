@@ -24,7 +24,7 @@ export interface FilterProps {
 }
 
 export interface HomeProps {
-  searchParams: FilterProps;
+  generateStaticParams: FilterProps;
 }
 
 export interface CarCardProps {

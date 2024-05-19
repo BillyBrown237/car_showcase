@@ -2,7 +2,7 @@ import { CarCard, CustomFilter, Hero, SearchBar, ShowMore } from "@/components";
 import { fuels, yearsOfProduction } from "@/constant";
 import { HomeProps } from "@/types";
 import { fetchCars } from "@/utils";
-
+export const dynamic = "force-dynamic";
 const Home = async ({ searchParams }: HomeProps) => {
   const allCars = await fetchCars({
     manufacturer: searchParams?.manufacturer || "",

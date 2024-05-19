@@ -42,8 +42,8 @@ const Home = async ({ generateStaticParams }: HomeProps) => {
             </div>
 
             <ShowMore
-              pageNumber={(generateStaticParams.limit || 10) / 10}
-              isNext={(generateStaticParams.limit || 10) > allCars.length}
+              pageNumber={(generateStaticParams?.limit || 10) / 10}
+              isNext={(generateStaticParams?.limit || 10) > allCars.length}
             />
           </section>
         ) : (

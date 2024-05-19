@@ -1,9 +1,9 @@
-import { fetchCars } from "@/utils";
-import { HomeProps } from "@/types";
+import { CarCard, CustomFilter, Hero, SearchBar, ShowMore } from "@/components";
 import { fuels, yearsOfProduction } from "@/constant";
-import { CarCard, ShowMore, SearchBar, CustomFilter, Hero } from "@/components";
+import { HomeProps } from "@/types";
+import { fetchCars } from "@/utils";
 
-export default async function Home({ searchParams }: HomeProps) {
+const Home = async ({ searchParams }: HomeProps) => {
   const allCars = await fetchCars({
     manufacturer: searchParams.manufacturer || "",
     year: searchParams.year || 2022,
@@ -37,7 +37,7 @@ export default async function Home({ searchParams }: HomeProps) {
           <section>
             <div className="home__cars-wrapper">
               {allCars?.map((car) => (
-                <CarCard car={car} />
+                <CarCard key={car.id} car={car} />
               ))}
             </div>
 
@@ -55,4 +55,6 @@ export default async function Home({ searchParams }: HomeProps) {
       </div>
     </main>
   );
-}
+};
+
+export default Home;

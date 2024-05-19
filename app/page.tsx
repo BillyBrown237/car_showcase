@@ -1,3 +1,4 @@
+'use client'
 import { CarCard, CustomFilter, Hero, SearchBar, ShowMore } from "@/components";
 import { fuels, yearsOfProduction } from "@/constant";
 import { HomeProps } from "@/types";
